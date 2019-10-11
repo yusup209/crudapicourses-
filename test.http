@@ -1,0 +1,52 @@
+@url = http://localhost:8000
+
+### untuk GET
+GET {{url}}/api/course/1 HTTP/1.1
+
+
+### untuk POST
+POST {{url}}/api/course/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Kursus menari",
+    "description": "Kursus PHP Framework dengan salah satu mastah PHP",
+    "price_per_hour": 1500000,
+    "avatar": ""
+}
+
+###
+POST {{url}}/api/course_category/create HTTP/1.1
+Content-Type:  application/json
+
+{
+    "name": "Musik"
+}
+
+### untuk PUT
+PUT {{url}}/api/course/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Kursus Bahasa Perancis",
+    "description": "Kursus Bahasa Perancis dengan seseorang",
+    "price_per_hour": 3000000,
+    "avatar": ""
+}
+
+###
+PUT {{url}}/api/course_category/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Bahasa Inggris"
+}
+
+
+### untuk delete
+DELETE {{url}}/api/course/delete/4/ HTTP/1.1
+
+###
+DELETE {{url}}/api/course_category/delete/8 HTTP/1.1
